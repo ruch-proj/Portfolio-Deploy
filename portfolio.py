@@ -1499,18 +1499,10 @@ def home():
 
 
 if __name__ == '__main__':
-    print("=" * 50)
-    print("STARTING RUCHIKA MAHAJAN PORTFOLIO")
-    print("=" * 50)
-    print(f"Current directory: {os.getcwd()}")
-    print(f"Static folder: {app.static_folder}")
-    print(f"Image path: {IMAGE_PATH}")
-    print(f"Image exists: {os.path.exists(IMAGE_PATH)}")
+    app.run(debug=True, port=5000)
+else:
+    # This is needed for Vercel
+    application = app
 
-    if os.path.exists(IMAGE_PATH):
-        print("✅ Image found!")
-        print(f"Image size: {os.path.getsize(IMAGE_PATH)} bytes")
-
-    print("=" * 50 + "\n")
 
     app.run(debug=True, port=5000)
