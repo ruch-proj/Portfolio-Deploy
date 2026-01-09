@@ -3,7 +3,7 @@ services:
     name: portfolio
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn portfolio:app
+    startCommand: gunicorn app:app
     plan: free
     envVars:
       - key: PYTHON_VERSION
