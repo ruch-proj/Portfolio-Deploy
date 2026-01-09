@@ -5,10 +5,10 @@
       "use": "@vercel/python"
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/api/index.py"
+      "src": "/(.*)",
+      "dest": "/api/index.py"
     }
   ],
   "headers": [
@@ -22,12 +22,8 @@
         {
           "key": "X-Content-Type-Options",
           "value": "nosniff"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600"
         }
       ]
     }
   ]
-}s
+}
