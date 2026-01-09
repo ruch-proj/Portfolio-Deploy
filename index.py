@@ -1,9 +1,11 @@
-"""
-Vercel handler - imports your portfolio
-"""
+import sys
+import os
 
-# Import your Flask app from portfolio.py
+# Add parent directory to path
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
+# Import your Flask app
 from portfolio import app
 
-# Vercel requires this to be called 'application'
+# Vercel needs this
 application = app
